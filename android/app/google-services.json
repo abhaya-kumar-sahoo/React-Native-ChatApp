@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "390039177047",
+    "project_id": "abhaya-8e18d",
+    "storage_bucket": "abhaya-8e18d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:390039177047:android:ec2bc9a7d2fd213a266012",
+        "android_client_info": {
+          "package_name": "com.chatapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "390039177047-877d93606jk30ju9kl3buj8dc44gnj52.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKhk00oYRLYuqSRAuzg9JnA--_42b1Ssw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "390039177047-877d93606jk30ju9kl3buj8dc44gnj52.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
