@@ -92,8 +92,8 @@ const ChatList = ({route}) => {
     getData();
   }, []);
 
-  const [loading, setLoading] = useState(true); // Set loading to true on component mount
-  const [users, setUsers] = useState([]); // Initial empty array of users
+  const [loading, setLoading] = useState(true);
+  const [users, setUsers] = useState([]);
 
   useEffect(() => {
     const subscriber = firestore()

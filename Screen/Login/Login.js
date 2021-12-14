@@ -26,7 +26,7 @@ const Login = () => {
         alert('Success ✅', 'Authenticated successfully');
         setDataInput(response.user);
         console.log(dataInput);
-        navigation.navigate('ChatList', {data: dataInput});
+        navigation.navigate('ContentScreen', {data: dataInput});
       }
     } catch (e) {
       console.error(e.message);
@@ -58,7 +58,10 @@ const Login = () => {
               value={value.password}
               onChangeText={text => setValue({...value, password: text})}
             />
-            <Buttons title="Log in" onPress={() => onPress()} />
+            <Buttons
+              title="Log in"
+              onPress={() => navigation.navigate('ContentScreen')}
+            />
           </View>
         </View>
       </LinearGradient>
