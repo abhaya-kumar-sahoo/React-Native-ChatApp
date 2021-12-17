@@ -71,7 +71,7 @@ export const Texts = ({
   );
 };
 
-export const Back = ({title = 'Back'}) => {
+export const Back = ({title = 'Back', padding = 20, style}) => {
   const navigation = useNavigation();
 
   return (
@@ -81,7 +81,7 @@ export const Back = ({title = 'Back'}) => {
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
-        padding: 20,
+        padding: padding,
       }}>
       <Icon name="caret-back-outline" color={'white'} size={30} />
 

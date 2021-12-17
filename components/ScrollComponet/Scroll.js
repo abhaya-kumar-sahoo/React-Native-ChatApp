@@ -16,14 +16,10 @@ import {
 } from 'react-native';
 import {ActivityIndicator} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-import Icon from 'react-native-vector-icons/dist/Ionicons';
-import {Buttons} from '../../components/Button/Button';
-
-import {LogBox} from 'react-native';
-export const Welcome = () => {
+export const Scroll = () => {
   const [state, setState] = useState(1);
   var curTime = new Date().getSeconds();
-  LogBox.ignoreLogs(['EventEmitter.removeListener']);
+
   const navigation = useNavigation();
 
   const [dimension, setDimension] = useState(Dimensions.get('window'));
@@ -85,19 +81,16 @@ export const Welcome = () => {
       url: require('../../assets/login1.jpeg'),
       content: 'Be',
       content2: 'Famous',
-      id: 1,
     },
     {
       url: require('../../assets/login2.jpeg'),
       content: 'Create',
       content2: 'Content',
-      id: 2,
     },
     {
       url: require('../../assets/login3.jpeg'),
       content: 'Shoot',
       content2: 'Potraits',
-      id: 3,
     },
   ];
 
@@ -117,86 +110,18 @@ export const Welcome = () => {
         onTouchStart={onTouchStart}
         onTouchEnd={onTouchEnd}
         pagingEnabled>
-        {carouselImages.map((value, id) => (
-          <ImageBackground
-            key={id}
-            source={value.url}
-            resizeMode="cover"
-            style={[styles.image, {width: dimension?.width}]}>
-            <View style={{marginTop: 230}}>
-              <Text style={styles.titleLogin}>{value.content}</Text>
-              <Text style={styles.titleLogin}>{value.content2}</Text>
-            </View>
-          </ImageBackground>
+        {carouselImages.map((value, key) => (
+          <View style={{}}>
+            <Text style={styles.titleLogin}>{value.content}</Text>
+            <Text style={styles.titleLogin}>{value.content2}</Text>
+          </View>
         ))}
       </ScrollView>
-      <View
-        style={{
-          flexDirection: 'row',
-          position: 'absolute',
-          alignSelf: 'center',
-          bottom: 0,
-        }}>
-        <LinearGradient
-          colors={['#E5E5E511', '#242A38']}
-          style={styles.linearGradient}>
-          <View style={{flex: 1, bottom: 10}}>
-            <Text
-              style={{
-                color: 'white',
-                marginHorizontal: 40,
-                fontSize: 20,
-                marginVertical: 25,
-              }}>
-              Shoot potraits through our best AI driven Camera Feature{state}
-            </Text>
-            <View style={styles.buttons}>
-              <Buttons
-                title="Log in"
-                width="45%"
-                colors={['#ffffff', '#ffffff']}
-                color="#F54B65"
-                marginHorizontal={50}
-                onPress={() => navigation.navigate('Login')}
-              />
-
-              <Buttons
-                title=" Sign up"
-                width={'45%'}
-                marginHorizontal={50}
-                onPress={() => navigation.navigate('Signup')}
-              />
-            </View>
-            <Text
-              style={{
-                textAlign: 'center',
-                color: 'white',
-                marginTop: 20,
-                fontSize: 16,
-                fontWeight: '300',
-              }}>
-              Or login with
-            </Text>
-
-            <View style={{justifyContent: 'center', marginVertical: 15}}>
-              <Icon
-                style={{textAlign: 'center', color: 'white', marginTop: 0}}
-                name="logo-google"
-                size={30}
-                color="white"
-              />
-            </View>
-          </View>
-        </LinearGradient>
-      </View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
   titleLogin: {
     fontSize: 50,
     textAlign: 'left',
@@ -204,18 +129,5 @@ const styles = StyleSheet.create({
     fontWeight: '900',
     marginLeft: 40,
     lineHeight: 50,
-  },
-
-  image: {
-    flex: 1,
-  },
-  buttons: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    width: 320,
-    marginLeft: 20,
-  },
-  linearGradient: {
-    flex: 1,
   },
 });

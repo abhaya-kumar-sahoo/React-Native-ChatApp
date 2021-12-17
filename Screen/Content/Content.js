@@ -82,9 +82,7 @@ const Content = () => {
   const navigation = useNavigation();
 
   return (
-    <ScrollView
-      style={{flex: 1, backgroundColor: '#2E3443'}}
-      showsVerticalScrollIndicator={false}>
+    <View style={{flex: 1, backgroundColor: '#2E3443'}}>
       <View style={{height: 250, backgroundColor: '#2E3450'}}>
         <View style={styles.header}>
           <Text style={{color: '#FFFFFF', fontWeight: '800', fontSize: 24}}>
@@ -128,7 +126,7 @@ const Content = () => {
           }}
         />
       </View>
-    </ScrollView>
+    </View>
   );
 };
 

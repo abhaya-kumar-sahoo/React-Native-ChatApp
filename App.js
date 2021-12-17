@@ -1,9 +1,9 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import {RootNav} from './Navigation/RootNav';
+import {RootNav, RootStack} from './Navigation/RootNav';
 
 const App = () => {
-  return <RootNav />;
+  return <RootStack />;
 };
 
 export default App;
